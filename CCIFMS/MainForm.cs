@@ -125,15 +125,13 @@ namespace CCIFMS
       var _inputreadertrytimes = 0;
       if (!int.TryParse(ConfigurationManager.AppSettings["InputReaderTryTime"], out _inputreadertrytimes))
       {
-        MessageBox.Show("Unable to reade [InputReaderTryTime] in setting! TryTimes is set to 15 as default", "CCIFMS",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        CommUtil.ShowWarning(CommUtil.MSG_001);
         _inputreadertrytimes = 15;
       }
       var _inputreadertryinterval = 0;
       if (!int.TryParse(ConfigurationManager.AppSettings["InputReaderTryInterval"], out _inputreadertryinterval))
       {
-        MessageBox.Show("Unable to reade [InputReaderTryInterval] in setting! TryTimes is set to 100 as default", "CCIFMS",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        CommUtil.ShowWarning(CommUtil.MSG_002);
         _inputreadertryinterval = 100;
       }
       CommUtil.InputFileTryTimes = _inputreadertrytimes;

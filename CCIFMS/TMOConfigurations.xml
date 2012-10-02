@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TMOConfigurations>
+  <TMOConfiguration Id="1" InputUNC="D:\TMO Test\BB1_Request" OutputUNC="D:\TMO Test\BB1_Response" StoreProcedure="TMO_TEST_LITE_IN" />
+  <TMOConfiguration Id="2" InputUNC="\\e-helpdesk\temp\TMO test\BB1_Request" OutputUNC="\\e-helpdesk\temp\TMO test\BB1_Response" StoreProcedure="TMO_TEST_LITE_IN" />
+  <TMOConfiguration Id="3" InputUNC="\\e-helpdesk\temp\TMO test\PDAIMEI1_Request" OutputUNC="\\e-helpdesk\temp\TMO test\PDAIMEI1_Response" StoreProcedure="TMO_PDAIMEI_IN" />
+</TMOConfigurations>

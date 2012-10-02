@@ -4,6 +4,7 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Windows.Forms;
 using System.Xml;
 using System.Threading;
 using log4net;
@@ -15,6 +16,9 @@ namespace CCIFMS
   {
     public static int InputFileTryTimes = 15;
     public static int InputFileTryInterval = 100;
+    public static string MSG_001 = "Unable to reade [InputReaderTryTime] in setting! TryTimes is set to 15 as default";
+    public static string MSG_002 = "Unable to reade [InputReaderTryInterval] in setting! TryTimes is set to 100 as default";
+    public static string MSGTITLE = "CCFMS";
 
     public static string GetProcessFileName(string FolderPath)
     {
@@ -99,6 +103,11 @@ namespace CCIFMS
           Thread.Sleep(tryintervalms);
         }
       }
+    }
+
+    public static void ShowWarning(string message)
+    {
+      MessageBox.Show(message, MSGTITLE, MessageBoxButtons.OK, MessageBoxIcon.Warning);
     }
 
     #endregion
